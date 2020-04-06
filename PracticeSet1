@@ -58,5 +58,25 @@ int main()
   cout << "Hours Worked: " << hoursWorked << endl;   // outputs user's hours worked
   cout << "Salary: " << salary << endl;         // outputs user's salary
   
+   /* 
+  **************************************************
+  Exercise 14: Actual hard drive storage capcity 
+  **************************************************
+  */ 
+  
+  double driveSize; // stores the size of the hard drive entered by user
+  double actualSize; // stores the actual size of the hard drive
+  
+  cout << "Please enter the size of your hard drive: ";  // output that prompts user for the size of the hard drive
+  cin >> driveSize;                                      // stores value in variable driveSize
+  cout << endl;
+  
+  
+  // convert user input into bytes by multiplying by one billion then divide by the actual number of bytes in a gigabyte (2^30 bytes)
+  actualSize = ( driveSize * 1000000000 ) / 1073741824; 
+  
+  cout << "The actual size of your hard drive is: " << actualSize << " GB." << endl;
+
+  
   return 0; // return nothing from main 
 }
