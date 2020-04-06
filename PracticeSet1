@@ -1,12 +1,19 @@
 /* Working from the C++ Programming Book by D.S. Malik, these are some of the practice problems from Chapter 1 */ 
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int main()
 {
 
+  /* 
+  **************************************************
+  Exercise 3: Averaging three numbers 
+  **************************************************
+  */ 
+  
   int num1 = 125;    // declare type int and initialize variable
   int num2 = 28;     // declare and initialize var to 28
   int num3 = -25;    // declare and initialize var to -25
@@ -20,6 +27,36 @@ int main()
   cout << "Num2 = " << num2 << endl;
   cout << "Num3 = " << num3 << endl;
   cout << "Average = " << average << endl;
+  
+   /* 
+  **************************************************
+  Exercise 6: Simple PayRoll calculator
+  **************************************************
+  */ 
+  
+  string name;              // Holds the employee's name.  
+  double payRate = 0.0;     // Holds the hourly wages for the employee.
+  double hoursWorked = 0.0;  // Holds the hours worked in a workweek.
+  double salary = 0.0;      // Holds the salary for the pay period. 
+  
+  cout << "Please enter the your first name: ";  // outputs prompt for user to input name
+  cin >> name;                                   // sotres name in 'name' variable
+  cout << endl;                                  // moves insertion to next line
+  
+  cout << "Please enter your hourly rate: ";     // outputs prompt for user to input their pay rate
+  cin >> payRate;                                // stores user input in payRate 
+  cout << endl;                                  
+  
+  cout << "Please enter the hours worked: ";    // outputs prompt for user to input hours worked
+  cin >> hoursWorked;                            // stores user input in hoursWorked
+  cout << endl;
+  
+  salary = payRate * hoursWorked; 
+  
+  cout << "Name: " << name << endl;             // outputs user name
+  cout << "Pay Rate: " << payRate << endl;      // outputs user's pay rate
+  cout << "Hours Worked: " << hoursWorked << endl;   // outputs user's hours worked
+  cout << "Salary: " << salary << endl;         // outputs user's salary
   
   return 0; // return nothing from main 
 }
