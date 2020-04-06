@@ -1,0 +1,25 @@
+/* Working from the C++ Programming Book by D.S. Malik, these are some of the practice problems from Chapter 1 */ 
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+  int num1 = 125;    // declare type int and initialize variable
+  int num2 = 28;     // declare and initialize var to 28
+  int num3 = -25;    // declare and initialize var to -25
+  int average;       // declare var average to type int for storing the average of num1, num2, num3
+  
+  average = ( num1 + num2 + num3) / 3;   // calculate and store the average by summing num1, num2, num3 and dividing by 3.
+
+
+  /* Output the values of each number and their average as calculated above. */
+  cout << "Num1 = " << num1 << endl; 
+  cout << "Num2 = " << num2 << endl;
+  cout << "Num3 = " << num3 << endl;
+  cout << "Average = " << average << endl;
+  
+  return 0; // return nothing from main 
+}
