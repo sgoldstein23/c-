@@ -1,0 +1,60 @@
+//Simple program that promtps the user to input three numbers that represent the three lenghts of a triangle. 
+//The program then sorts the input from largest to smallest and designates the largest number as the hypotenuse
+//It then uses the Pyhtogrean Theorum to determine if the three lenghts create a right triangle. 
+
+
+#include <iostream> 
+#include <iomanip>
+#include <cmath> 
+
+using namespace std;
+
+int main() 
+{
+	
+   // Asks for user input. 
+    cout << "Please input three numbers seperated by a space"
+         << " to determine if it is a right triangle: ";
+    cin >> num1 >> num2 >> num3; 
+    cout << endl;
+
+  // Begins sorting input to determine which is the hypotenuse. 
+
+    if (num1 > num2 && num1 > num3)
+    {
+      hypotenuse = num1;      // Assigns entry to hypotenuse for further calculations. Should I remove this intermediary variable? 
+      sideA = num2;
+      sideB = num3;
+    }
+    else if (num2 > num1 && num2 > num3)
+    {
+      hypotenuse = num2;
+      sideA = num1;
+      sideB = num3;
+
+    }
+    else if (num3 > num1 && num3 > num2)
+    {
+      hypotenuse = num3;
+      sideA = num1;
+      sideB = num2;
+    }
+    else
+
+      cout << "It is not a right triangle." << endl;
+
+    // squares user input for use in final control statement. 
+    hypotenuseSqr = pow(hypotenuse, 2.0); 
+
+    sideASqr = pow(sideA, 2.0);
+
+    sideBSqr = pow(sideB, 2.0);
+
+    if (hypotenuseSqr == sideASqr + sideBSqr)   //Checks to see if thee sum of side A  side B, squared, equal the hypotenuse squared. 
+    {
+      cout << "This is a right triangle." << endl;
+    }
+    else
+      cout << "This is not a right triangle." << endl;   // The only other alternative is that it isn't a right triangle.
+      
+}
